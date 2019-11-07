@@ -1,4 +1,5 @@
 import 'package:advaya/screens/homepage.dart';
+import 'package:advaya/screens/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -23,7 +24,8 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   navigateToSignup() {
-    Navigator.pushReplacementNamed(context, "/SignupPage");
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => SignupPage()));
   }
 
   void initState() {
