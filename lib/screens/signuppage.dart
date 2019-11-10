@@ -76,8 +76,8 @@ class _SignupPageState extends State<SignupPage> {
               'Round2': 0,
               'Round3': 0,
               'Round4': 0,
-              'Status': 'New',
-            }
+            },
+            'Status': 'Round1'
           });
         }
       } catch (e) {
