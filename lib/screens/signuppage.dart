@@ -72,6 +72,9 @@ class _SignupPageState extends State<SignupPage> {
             'Year': _year,
             'Department': _department,
             'Status': 'New',
+            'Round1': 'Pending',
+            'Round2': 'Pending',
+            'Round3': 'Pending',
             'Scores': {
               'Round1': 0,
               'Round2': 0,

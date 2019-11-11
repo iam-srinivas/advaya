@@ -47,12 +47,12 @@ class _HomePageState extends State<HomePage> {
     this.getUser();
   }
 
-  Widget customCard(String name) {
+  Widget customCard(String name, String path) {
     return ListTile(
       title: Text(name),
       onTap: () {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => QuizPage()));
+            MaterialPageRoute(builder: (context) => QuizPage(path: path)));
       },
     );
   }
@@ -65,9 +65,9 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          customCard('Round 1'),
-          customCard('Round 2'),
-          customCard('Round 3'),
+          customCard('Round 1', 'assets/round1.json'),
+          customCard('Round 2', 'assets/round2.json'),
+          customCard('Round 3', 'assets/round3.json'),
         ],
       ),
       drawer: Drawer(
