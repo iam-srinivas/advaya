@@ -1,4 +1,5 @@
 import 'package:advaya/screens/loginpage.dart';
+import 'package:advaya/screens/quizpage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -46,23 +47,44 @@ class _HomePageState extends State<HomePage> {
     this.getUser();
   }
 
+  Widget customCard(String name) {
+    return ListTile(
+      title: Text(name),
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => QuizPage()));
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page'),
       ),
-      body: Center(
-        child: RaisedButton(
-          color: Colors.purple,
-          onPressed: signOut,
-          padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
-          child: Text(
-            'Sign Out',
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+      body: ListView(
+        children: <Widget>[
+          customCard('Round 1'),
+          customCard('Round 2'),
+          customCard('Round 3'),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text('Name'),
+              accountEmail: user != null ? Text(user.email) : Text('Loading'),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.purple,
+              ),
+            ),
+            ListTile(
+              title: Text('Log Out'),
+              onTap: signOut,
+            ),
+          ],
         ),
       ),
     );
