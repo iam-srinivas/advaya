@@ -71,13 +71,13 @@ class _SignupPageState extends State<SignupPage> {
             'Usn': _usn,
             'Year': _year,
             'Department': _department,
+            'Status': 'New',
             'Scores': {
               'Round1': 0,
               'Round2': 0,
               'Round3': 0,
               'Round4': 0,
-            },
-            'Status': 'Round1'
+            }
           });
         }
       } catch (e) {
