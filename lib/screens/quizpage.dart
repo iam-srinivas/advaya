@@ -27,18 +27,45 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  int score = 0;
+
+  Color displayColor = Colors.purple;
+  Color wrong = Colors.red;
+  Color right = Colors.green;
+
+  Map<String, Color> btnColor = {
+    "a": Colors.purple,
+    "b": Colors.purple,
+    "c": Colors.purple,
+    "d": Colors.purple
+  };
+  checkAnswer(String option) {
+    if (myData[2]["1"] == myData[1]["1"][option]) {
+      score = score + 5;
+      print(score);
+      displayColor = right;
+    } else {
+      displayColor = wrong;
+    }
+    setState(() {
+      btnColor[option] = displayColor;
+    });
+  }
+
   Widget choiceButton(String option) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
       child: MaterialButton(
         minWidth: 200.0,
         height: 40,
-        onPressed: () {},
+        onPressed: () {
+          checkAnswer(option);
+        },
         child: Text(
           myData[1]['1'][option],
           style: TextStyle(color: Colors.white),
         ),
-        color: Colors.purple,
+        color: btnColor[option],
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       ),
