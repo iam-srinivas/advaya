@@ -3,89 +3,129 @@
     "Name": "Round 2"
   },
   {
-    "1": "Round2 question 1",
-    "2": "Round2 question 2",
-    "3": "Round2 question 3",
-    "4": "Round2 question 4",
-    "5": "Round2 question 5",
-    "6": "Round2 question 6",
-    "7": "Round2 question 7",
-    "8": "Round2 question 8",
-    "9": "Round2 question 9",
-    "10": "Round2 question 10"
+    "1": "Aircraft is made up of which metals?",
+    "2": "why boat floats on water? 1.gravity 2.weight 3.design 4.material",
+    "3": "Chandrayan-2 rover has ____ wheels",
+    "4": "Strongest metal on earth?",
+    "5": "when a tube of smaller diameter is dipped in water, the water rises in the tube due to viscosity of water",
+    "6": "AM stands for in electronic communications",
+    "7": "lenght of the cable is doubled its capacitence C will be",
+    "8": "What is SIM",
+    "9": "Unit for lumious flux is",
+    "10": "Find the odd one out",
+    "11": "When was the first smartphone launched?",
+    "12": "Which computer language is used for AI",
+    "13": "The binary system uses powers of",
+    "14": "A list of coded instructions is called",
+    "15": "Which protocol is used to send e-mail"
   },
   {
     "1": {
-      "a": "1a",
-      "b": "1b",
-      "c": "1c",
-      "d": "1d"
+      "a": "aluminium, steel, titanium",
+      "b": "aluminium, magnesium, titanium",
+      "c": "titanium, beryllium, aluminium",
+      "d": "magnesium, steel, aluminium"
     },
     "2": {
-      "a": "2a",
-      "b": "2b",
-      "c": "2c",
-      "d": "2d"
+      "a": "2,3,4",
+      "b": "1,3,4",
+      "c": "1,2,3",
+      "d": "1,2,4"
     },
     "3": {
-      "a": "3a",
-      "b": "3b",
-      "c": "3c",
-      "d": "3d"
+      "a": "2",
+      "b": "4",
+      "c": "6",
+      "d": "8"
     },
     "4": {
-      "a": "4a",
-      "b": "4b",
-      "c": "4c",
-      "d": "4d"
+      "a": "tungsten",
+      "b": "gold",
+      "c": "zinc",
+      "d": "chromium"
     },
     "5": {
-      "a": "5a",
-      "b": "5b",
-      "c": "5c",
-      "d": "5d"
+      "a": "true",
+      "b": "false",
+      "c": "partially true",
+      "d": "partially false"
     },
     "6": {
-      "a": "6a",
-      "b": "6b",
-      "c": "6c",
-      "d": "6d"
+      "a": "amp modification",
+      "b": "application modifier",
+      "c": "ampere method",
+      "d": "amplitude modulation"
     },
     "7": {
-      "a": "7a",
-      "b": "7b",
-      "c": "7c",
-      "d": "7d"
+      "a": "one fourth",
+      "b": "one half",
+      "c": "doubled",
+      "d": "unchanged"
     },
     "8": {
-      "a": "8a",
-      "b": "8b",
-      "c": "8c",
-      "d": "8d"
+      "a": "select interrupt mask",
+      "b": "set interrupt mask",
+      "c": "sort interrupt mask",
+      "d": "none of these"
     },
     "9": {
-      "a": "9a",
-      "b": "9b",
-      "c": "9c",
-      "d": "9d"
+      "a": "steradians",
+      "b": "lux",
+      "c": "candela",
+      "d": "lumens"
     },
     "10": {
-      "a": "10a",
-      "b": "10b",
-      "c": "10c",
-      "d": "10d"
+      "a": "Absorptivity",
+      "b": "emisivity",
+      "c": "refractive index",
+      "d": "dielectric strength"
+    },
+    "11": {
+      "a": "1992",
+      "b": "1996",
+      "c": "2005",
+      "d": "2007"
+    },
+    "12": {
+      "a": "C",
+      "b": "prolog",
+      "c": "java",
+      "d": "python"
+    },
+    "13": {
+      "a": "16",
+      "b": "8",
+      "c": "4",
+      "d": "2"
+    },
+    "14": {
+      "a": "code",
+      "b": "instruction set",
+      "c": "computer program",
+      "d": "syntax"
+    },
+    "15": {
+      "a": "http",
+      "b": "pop3",
+      "c": "tcp",
+      "d": "smtp"
     }
   },
   {
-    "1": "1a",
-    "2": "2b",
-    "3": "3c",
-    "4": "4d",
-    "5": "5a",
-    "6": "6b",
-    "7": "7c",
-    "8": "8d",
-    "9": "9a",
-    "10": "10b"
+    "1": "aluminium, steel, titanium",
+    "2": "1,2,3",
+    "3": "6",
+    "4": "tungsten",
+    "5": "false",
+    "6": "amplitude modulation",
+    "7": "doubled",
+    "8": "set interrupt mask",
+    "9": "lumens",
+    "10": "dielectric strength",
+    "11": "1992",
+    "12": "prolog",
+    "13": "2",
+    "14": "computer program",
+    "15": "smtp"
   }
 ]

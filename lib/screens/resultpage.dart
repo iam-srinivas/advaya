@@ -1,20 +1,35 @@
 import 'package:advaya/screens/homepage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatefulWidget {
   final int score;
   final String round;
+  final DocumentSnapshot document;
 
-  ResultPage({Key key, @required this.score, this.round}) : super(key: key);
+  ResultPage({Key key, @required this.score, this.round, this.document})
+      : super(key: key);
 
   @override
-  _ResultPageState createState() => _ResultPageState(score, round);
+  _ResultPageState createState() => _ResultPageState(score, round, document);
 }
 
 class _ResultPageState extends State<ResultPage> {
   final int score;
   final String round;
-  _ResultPageState(this.score, this.round);
+  final DocumentSnapshot document;
+  _ResultPageState(this.score, this.round, this.document);
+
+  @override
+  void initState() {
+    super.initState();
+    updateResult(document, round, score);
+  }
+
+  updateResult(DocumentSnapshot document, String round, int score) async {
+    await document.reference.updateData({'Scores.${round}': score});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +38,7 @@ class _ResultPageState extends State<ResultPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Your Score in ${round} is ${score} Points',
+              'Your Response Has Been Recorded Thank You For Participation',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             Padding(

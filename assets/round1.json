@@ -3,89 +3,129 @@
     "Name": "Round 1"
   },
   {
-    "1": "Round1 question 1",
-    "2": "Round1 question 2",
-    "3": "Round1 question 3",
-    "4": "Round1 question 4",
-    "5": "Round1 question 5",
-    "6": "Round1 question 6",
-    "7": "Round1 question 7",
-    "8": "Round1 question 8",
-    "9": "Round1 question 9",
-    "10": "Round1 question 10"
+    "1": "Whict is not an Example of Aircraft",
+    "2": "A vehicle with more cylinders in engine produces",
+    "3": "Least speed required to a rocket in order to reach space?",
+    "4": "Sonic boom generates",
+    "5": "Space shuttle thermally protected by?",
+    "6": "FM stands for",
+    "7": "What is meant by ALU?",
+    "8": "A microprocessor is ALU",
+    "9": "Candela is the unit of which?",
+    "10": "Which lamps can be directly connected to a solar cell",
+    "11": "'Do no evil' is tag line of",
+    "12": "Which IT companys nickname is 'The big blue'",
+    "13": "What is Scarewares",
+    "14": "ASCII stands for",
+    "15": "The term computer is derived from?"
   },
   {
     "1": {
-      "a": "1a",
-      "b": "1b",
-      "c": "1c",
-      "d": "1d"
+      "a": "Airplane",
+      "b": "Helicopter",
+      "c": "Air Ballons",
+      "d": "Aie Ship"
     },
     "2": {
-      "a": "2a",
-      "b": "2b",
-      "c": "2c",
-      "d": "2d"
+      "a": "more power, better fuel economy",
+      "b": "more power, reduce fuel economy",
+      "c": "less power, better fuel economy",
+      "d": "less power, reduce fuel economy"
     },
     "3": {
-      "a": "3a",
-      "b": "3b",
-      "c": "3c",
-      "d": "3d"
+      "a": "6.2kmph",
+      "b": "7.5kmph",
+      "c": "7.9kmph",
+      "d": "8.5kmph"
     },
     "4": {
-      "a": "4a",
-      "b": "4b",
-      "c": "4c",
-      "d": "4d"
+      "a": "wind energy",
+      "b": "thermal energy",
+      "c": "sound energy",
+      "d": "all the above"
     },
     "5": {
-      "a": "5a",
-      "b": "5b",
-      "c": "5c",
-      "d": "5d"
+      "a": "silica tiles",
+      "b": "aluminium",
+      "c": "titanium",
+      "d": "marble tiles"
     },
     "6": {
-      "a": "6a",
-      "b": "6b",
-      "c": "6c",
-      "d": "6d"
+      "a": "frequent modulation",
+      "b": "frequency modulation",
+      "c": "frequency modulator",
+      "d": "frequent modulator"
     },
     "7": {
-      "a": "7a",
-      "b": "7b",
-      "c": "7c",
-      "d": "7d"
+      "a": "arithmetic logic upgrade",
+      "b": "arithmetic logic unsigned",
+      "c": "arithmetic local unsigned",
+      "d": "arithmetic logic unit"
     },
     "8": {
-      "a": "8a",
-      "b": "8b",
-      "c": "8c",
-      "d": "8d"
+      "a": "and control unit on a single chip",
+      "b": "and memory on a single chip",
+      "c": "register unit and i/o device on a single chip",
+      "d": "register unit and control unit on a single chip"
     },
     "9": {
-      "a": "9a",
-      "b": "9b",
-      "c": "9c",
-      "d": "9d"
+      "a": "wavelenght",
+      "b": "luminous intensity",
+      "c": "luminous flux",
+      "d": "frequency"
     },
     "10": {
-      "a": "10a",
-      "b": "10b",
-      "c": "10c",
-      "d": "10d"
+      "a": "incandescent",
+      "b": "metal halide",
+      "c": "led",
+      "d": "compact fluorescent"
+    },
+    "11": {
+      "a": "microsoft",
+      "b": "google",
+      "c": "amazon",
+      "d": "flipkart"
+    },
+    "12": {
+      "a": "tcs",
+      "b": "infosys",
+      "c": "wipro",
+      "d": "ibm"
+    },
+    "13": {
+      "a": "antivirus software",
+      "b": "debugger",
+      "c": "Fake antivirus softwares",
+      "d": "compact fluorescent"
+    },
+    "14": {
+      "a": "American standard code for intercommunication interchange",
+      "b": "American standard code for information interchange",
+      "c": "American standard code for instruction interchange",
+      "d": "American standard code for interprocess interchange"
+    },
+    "15": {
+      "a": "latin",
+      "b": "greek",
+      "c": "spanish",
+      "d": "german"
     }
   },
   {
-    "1": "1a",
-    "2": "2b",
-    "3": "3c",
-    "4": "4d",
-    "5": "5a",
-    "6": "6b",
-    "7": "7c",
-    "8": "8d",
-    "9": "9a",
-    "10": "10b"
+    "1": "Air Ballons",
+    "2": "more power, reduce fuel economy",
+    "3": "7.9kmph",
+    "4": "sound energy",
+    "5": "silica tiles",
+    "6": "frequency modulation",
+    "7": "arithmetic logic unit",
+    "8": "register unit and control unit on a single chip",
+    "9": "luminous intensity",
+    "10": "led",
+    "11": "google",
+    "12": "ibm",
+    "13": "Fake antivirus softwares",
+    "14": "American standard code for information interchange",
+    "15": "latin"
   }
 ]

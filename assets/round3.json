@@ -3,89 +3,129 @@
     "Name": "Round 3"
   },
   {
-    "1": "Round3 question 1",
-    "2": "Round3 question 2",
-    "3": "Round3 question 3",
-    "4": "Round3 question 4",
-    "5": "Round3 question 5",
-    "6": "Round3 question 6",
-    "7": "Round3 question 7",
-    "8": "Round3 question 8",
-    "9": "Round3 question 9",
-    "10": "Round3 question 10"
+    "1": "Which is the branch of fluid mechanics that deals with flows having significant changes in fluid density?",
+    "2": "Which supersonic jet is used by a passenger airline?",
+    "3": "Minimum rpm needed to produce electrical energy by a wind turbine is",
+    "4": "In one dimensional flow the flow",
+    "5": "In a free nappe",
+    "6": "A substance whose permeability is less than the permeability of free space is",
+    "7": "Ferranti effect will not occur in which of the following transmission lines?",
+    "8": "Which of the following circuit transmitts two message simulataneously in one direction",
+    "9": "Which insulating materials that can tolerate max temperature ",
+    "10": "The number of atoms per unit cell in a body centered cube (BCC)",
+    "11": "Which device is required for the internet connection?",
+    "12": "hotmail is owned by",
+    "13": "FORTRAN is",
+    "14": "First page of web page is termed as",
+    "15": "Junk e-mail is also called"
   },
   {
     "1": {
-      "a": "1a",
-      "b": "1b",
-      "c": "1c",
-      "d": "1d"
+      "a": "aerodynamics",
+      "b": "compressible flow",
+      "c": "transonic flow",
+      "d": "aerospace engineering"
     },
     "2": {
-      "a": "2a",
-      "b": "2b",
-      "c": "2c",
-      "d": "2d"
+      "a": "concorde",
+      "b": "sukhoi su-27",
+      "c": "f-16",
+      "d": "raptor"
     },
     "3": {
-      "a": "3a",
-      "b": "3b",
-      "c": "3c",
-      "d": "3d"
+      "a": "10-20",
+      "b": "20-30",
+      "c": "30-40",
+      "d": "40-50"
     },
     "4": {
-      "a": "4a",
-      "b": "4b",
-      "c": "4c",
-      "d": "4d"
+      "a": "is steady and uniform",
+      "b": "takes place in curve",
+      "c": "takes place in straight line",
+      "d": "takes place in bi direction"
     },
     "5": {
-      "a": "5a",
-      "b": "5b",
-      "c": "5c",
-      "d": "5d"
+      "a": "the pressure below the nappe is atmospheric",
+      "b": "the pressure below the nappe is neative",
+      "c": "the pressure above the nappe is atmospheric",
+      "d": "the pressure above the nappe is negative"
     },
     "6": {
-      "a": "6a",
-      "b": "6b",
-      "c": "6c",
-      "d": "6d"
+      "a": "paramagnetic",
+      "b": "ferromagnetic",
+      "c": "not a magnetic substance",
+      "d": "diamagnetic"
     },
     "7": {
-      "a": "7a",
-      "b": "7b",
-      "c": "7c",
-      "d": "7d"
+      "a": "short transmission lines",
+      "b": "medium transmission lines",
+      "c": "long transmission lines",
+      "d": "all the above"
     },
     "8": {
-      "a": "8a",
-      "b": "8b",
-      "c": "8c",
-      "d": "8d"
+      "a": "duplex",
+      "b": "diplex",
+      "c": "simplex",
+      "d": "quadruplex"
     },
     "9": {
-      "a": "9a",
-      "b": "9b",
-      "c": "9c",
-      "d": "9d"
+      "a": "mica",
+      "b": "porcelain",
+      "c": "glass",
+      "d": "all of these"
     },
     "10": {
-      "a": "10a",
-      "b": "10b",
-      "c": "10c",
-      "d": "10d"
+      "a": "7",
+      "b": "4",
+      "c": "2",
+      "d": "12"
+    },
+    "11": {
+      "a": "modem",
+      "b": "router",
+      "c": "monitor",
+      "d": "hard disk"
+    },
+    "12": {
+      "a": "google",
+      "b": "microsoft",
+      "c": "yahoo",
+      "d": "amazon"
+    },
+    "13": {
+      "a": "formula translation",
+      "b": "frequency transformation",
+      "c": "frequency translation",
+      "d": "formula transformation"
+    },
+    "14": {
+      "a": "login page",
+      "b": "link page",
+      "c": "history page",
+      "d": "home page"
+    },
+    "15": {
+      "a": "virus file",
+      "b": "spam",
+      "c": "error 404",
+      "d": "junk file"
     }
   },
   {
-    "1": "1a",
-    "2": "2b",
-    "3": "3c",
-    "4": "4d",
-    "5": "5a",
-    "6": "6b",
-    "7": "7c",
-    "8": "8d",
-    "9": "9a",
-    "10": "10b"
+    "1": "compressible flow",
+    "2": "concorde",
+    "3": "10-20",
+    "4": "takes place in straight line",
+    "5": "the pressure below the nappe is atmospheric",
+    "6": "diamagnetic",
+    "7": "long transmission line",
+    "8": "diplex",
+    "9": "all of these",
+    "10": "12",
+    "11": "modem",
+    "12": "microsoft",
+    "13": "formula translation",
+    "14": "home page",
+    "15": "spam"
   }
 ]

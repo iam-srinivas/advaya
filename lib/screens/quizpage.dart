@@ -1,12 +1,14 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:advaya/screens/resultpage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class QuizPage extends StatelessWidget {
   final String path;
-  QuizPage({Key key, @required this.path}) : super(key: key);
+  final DocumentSnapshot document;
+  QuizPage({Key key, @required this.path, this.document}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -16,7 +18,10 @@ class QuizPage extends StatelessWidget {
         if (myData == null)
           return Center(child: CircularProgressIndicator());
         else
-          return Quiz(myData: myData);
+          return Quiz(
+            myData: myData,
+            document: document,
+          );
       },
     );
   }
@@ -24,23 +29,22 @@ class QuizPage extends StatelessWidget {
 
 class Quiz extends StatefulWidget {
   final List myData;
-  Quiz({Key key, @required this.myData}) : super(key: key);
+  final DocumentSnapshot document;
+  Quiz({Key key, @required this.myData, this.document}) : super(key: key);
 
   @override
-  _QuizState createState() => _QuizState(myData);
+  _QuizState createState() => _QuizState(myData, document);
 }
 
 class _QuizState extends State<Quiz> {
   int score = 0;
   int i = 1;
-  int timer = 30;
-  String showTimer = "30";
+  int timer = 15;
+  String showTimer = "15";
   bool cancelTimer = false;
   bool isButtonTapped = false;
 
-  Color displayColor = Colors.purple;
-  Color wrong = Colors.red;
-  Color right = Colors.green;
+  Color displayColor = Colors.blue;
 
   Map<String, Color> btnColor = {
     "a": Colors.purple,
@@ -68,7 +72,7 @@ class _QuizState extends State<Quiz> {
 
   void nextQuestion() {
     cancelTimer = false;
-    timer = 30;
+    timer = 15;
     isButtonTapped = false;
 
     if (i < myData[1].length) {
@@ -85,6 +89,7 @@ class _QuizState extends State<Quiz> {
           builder: (context) => ResultPage(
                 score: score,
                 round: myData[0]['Name'],
+                document: document,
               )));
     }
   }
@@ -93,16 +98,28 @@ class _QuizState extends State<Quiz> {
   void initState() {
     super.initState();
     startTimer();
+    updateStatus(document);
+  }
+
+  updateStatus(DocumentSnapshot document) async {
+    switch (document['Status']) {
+      case 'Round1':
+        await document.reference.updateData({'Status': 'Round1Completed'});
+        break;
+      case 'Round2':
+        await document.reference.updateData({'Status': 'Round2Completed'});
+        break;
+      case 'Round3':
+        await document.reference.updateData({'Status': 'Round3Completed'});
+        break;
+    }
   }
 
   void checkAnswer(String option) {
     isButtonTapped = true;
     if (myData[3][i.toString()] == myData[2][i.toString()][option]) {
       score = score + 5;
-      displayColor = right;
-    } else {
-      displayColor = wrong;
-    }
+    } else {}
     setState(() {
       btnColor[option] = displayColor;
     });
@@ -133,7 +150,8 @@ class _QuizState extends State<Quiz> {
   }
 
   List myData;
-  _QuizState(this.myData);
+  DocumentSnapshot document;
+  _QuizState(this.myData, this.document);
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations(

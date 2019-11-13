@@ -1,5 +1,6 @@
 import 'package:advaya/screens/loginpage.dart';
 import 'package:advaya/screens/quizpage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -12,6 +13,8 @@ class _HomePageState extends State<HomePage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   FirebaseUser user;
   bool isSignedIn = false;
+  Firestore db = Firestore.instance;
+  String uId;
 
   checkAuthentication() async {
     _auth.onAuthStateChanged.listen((user) {
@@ -32,6 +35,7 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         this.user = firebaseUser;
         this.isSignedIn = true;
+        this.uId = user.uid;
       });
     }
   }
@@ -47,14 +51,33 @@ class _HomePageState extends State<HomePage> {
     this.getUser();
   }
 
-  Widget customCard(String name, String path) {
+  Widget customCard(BuildContext context, String name, String path,
+      DocumentSnapshot document) {
     return ListTile(
       title: Text(name),
       onTap: () {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => QuizPage(path: path)));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) => QuizPage(
+                  path: path,
+                  document: document,
+                )));
       },
     );
+  }
+
+  Widget _buildListItem(BuildContext context, DocumentSnapshot document) {
+    switch (document['Status']) {
+      case 'Round1':
+        return customCard(context, 'Round 1', 'assets/round1.json', document);
+      case 'Round2':
+        return customCard(context, 'Round 2', 'assets/round2.json', document);
+      case 'Round3':
+        return customCard(context, 'Round 3', 'assets/round3.json', document);
+      default:
+        return Center(
+          child: Text('Please Wait ....'),
+        );
+    }
   }
 
   @override
@@ -63,18 +86,35 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Home Page'),
       ),
-      body: ListView(
-        children: <Widget>[
-          customCard('Round 1', 'assets/round1.json'),
-          customCard('Round 2', 'assets/round2.json'),
-          customCard('Round 3', 'assets/round3.json'),
-        ],
-      ),
+      body: isSignedIn
+          ? StreamBuilder(
+              stream: db
+                  .collection('users')
+                  .where('UId', isEqualTo: uId)
+                  .snapshots(),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                } else {
+                  return ListView.builder(
+                    itemCount: snapshot.data.documents.length,
+                    itemBuilder: (BuildContext context, index) =>
+                        _buildListItem(context, snapshot.data.documents[index]),
+                  );
+                }
+              },
+            )
+          : Center(
+              child: CircularProgressIndicator(),
+            ),
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Name'),
+              accountName:
+                  user != null ? Text(user.displayName) : Text('Loading'),
               accountEmail: user != null ? Text(user.email) : Text('Loading'),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.purple,
